@@ -8,12 +8,16 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <div>
-      <Navbar />
-      <Home />
+      <Navbar/>
+      <Home/>
       <About/>
       <Skills/>
+      <div className="py-20 bg-[#0a192f]">
       <Proyectos/>
-      <Contact/>
+      </div>
+      <div className="py-20 bg-[#0a192f]">
+        <Contact/>
+      </div>
     </div>
   );
 }

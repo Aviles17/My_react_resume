@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
-import Logo from '../assets/logo_temp.png'
+/*import Logo form '../assets/logo_temp.png' */
+import Logo from '../assets/Protected/My_Logo_C.png'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
+import {Link} from 'react-scroll'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -12,16 +14,36 @@ const Navbar = () => {
 
         {/* Logo as Image */}
         <div>
-            <img src={Logo} alt="Logo" style={{width: '50px'}}/>
+            <img src={Logo} alt="Logo" style={{width: '55px'}}/>
         </div>
 
         {/* Menu of options */}
         <ul className='hidden md:flex'>
-          <li>Home</li>
-          <li>Acerca de</li>
-          <li>Habilidades</li>
-          <li>Proyectos</li>
-          <li>Contacto</li>
+          <li>
+            <Link to="main" smooth={true} duration={500}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="about" smooth={true} duration={500}>
+              Acerca de
+            </Link>
+          </li>
+          <li>
+            <Link to="skills" smooth={true} duration={500}>
+            Habilidades
+            </Link>
+          </li>
+          <li>
+            <Link to="work" smooth={true} duration={500} offset={-80}>
+              Proyectos
+            </Link>
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={500} offset={-80}>
+              Contacto
+            </Link>
+          </li>
         </ul>
 
         {/* Hamburger */}
@@ -31,11 +53,31 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-          <li className='py-6 text-4xl'>Home</li>
-          <li className='py-6 text-4xl'>About</li>
-          <li className='py-6 text-4xl'>Skills</li>
-          <li className='py-6 text-4xl'>Work</li>
-          <li className='py-6 text-4xl'>Contact</li>
+          <li className='py-6 text-4xl'>            
+            <Link onClick={handleClick} to="main" smooth={true} duration={500} >
+              Home
+            </Link>
+          </li>
+          <li className='py-6 text-4xl'>            
+            <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+              Acerca de
+            </Link>
+          </li>
+          <li className='py-6 text-4xl'>            
+            <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+            Habilidades
+            </Link>
+          </li>
+          <li className='py-6 text-4xl'>            
+            <Link onClick={handleClick} to="work" smooth={true} duration={500} offset={-80}>
+              Proyectos
+            </Link>
+          </li>
+          <li className='py-6 text-4xl'>            
+            <Link onClick={handleClick} to="contact" smooth={true} duration={500} offset={-80}>
+              Contacto
+            </Link>
+          </li>
         </ul>
 
 
@@ -43,22 +85,22 @@ const Navbar = () => {
         <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
           <ul>
             <li className='w-[150px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-              <a className='flex justify-between items-center w-full text-gray-200' href='/'>
+              <a className='flex justify-between items-center w-full text-gray-200' href='https://www.linkedin.com/in/santiago-avilés'>
                 Linkedin <FaLinkedin size={20}/>
               </a>
             </li>
             <li className='w-[150px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-              <a className='flex justify-between items-center w-full text-gray-200' href='/'>
+              <a className='flex justify-between items-center w-full text-gray-200' href='https://github.com/Aviles17'>
                 Github <FaGithub size={20}/>
               </a>
             </li>
             <li className='w-[150px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff3333]'>
-              <a className='flex justify-between items-center w-full text-gray-200' href='/'>
+              <Link to="contact" smooth={true} duration={500} offset={-80} className='flex justify-between items-center w-full text-gray-200'>
                 Mail <HiOutlineMail size={20}/>
-              </a>
+              </Link>
             </li>
             <li className='w-[150px] h-[55px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-500'>
-              <a className='flex justify-between items-center w-full text-gray-200' href='/'>
+              <a className='flex justify-between items-center w-full text-gray-200' href='src/assets/Protected/CSV SANTIAGO AVILÉS.pdf' download>
                 Resume <BsFillPersonLinesFill size={20}/>
               </a>
             </li>
