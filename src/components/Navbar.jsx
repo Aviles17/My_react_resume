@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-/*import Logo form '../assets/logo_temp.png' */
-import Logo from '../assets/Protected/My_Logo_C.png'
+import Logo from '../assets/My_Logo_C.png'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
