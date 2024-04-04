@@ -4,7 +4,7 @@ import Pacman from '../assets/Pacman-P4.jpg'
 import Hypo from '../assets/Hypo-P5.png'
 import NB from '../assets/Email-Class.png'
 import PST from '../assets/Supertrend-P3.png'
-import Dashboard_P from '../assets/Protected/Dash-P2.png'
+import Dashboard_P from '../assets/Dash-P2.png'
 
 const Proyectos = () => {
   return (
